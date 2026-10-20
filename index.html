@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Hoopers Academy Semarang</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/33/33736.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        sport: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        basket: {
+                            orange: '#FF5722',
+                            dark: '#12121E',
+                            card: '#1E1E2F',
+                            accent: '#FF8A65'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans min-h-screen selection:bg-basket-orange selection:text-white">
+
+    <!-- NAVIGASI UTAMA -->
+    <header class="bg-basket-dark/95 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-11 h-11 bg-basket-orange rounded-xl flex items-center justify-center shadow-lg shadow-basket-orange/30">
+                    <i class="fa-solid fa-basketball text-white text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-sport font-black text-lg sm:text-2xl tracking-wider uppercase text-white">FRESH HOOPERS</h1>
+                    <p class="text-[10px] sm:text-xs text-basket-accent tracking-widest font-semibold">BASKETBALL ACADEMY SEMARANG</p>
+                </div>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                <a href="#beranda" class="hover:text-basket-orange transition-colors">Beranda</a>
+                <a href="#pendaftaran" class="hover:text-basket-orange transition-colors">Pendaftaran</a>
+                <a href="#spp" class="hover:text-basket-orange transition-colors">Portal SPP</a>
+                <a href="#jadwal" class="hover:text-basket-orange transition-colors">Jadwal Latihan</a>
+                <a href="#galeri" class="hover:text-basket-orange transition-colors">Galeri</a>
+            </nav>
+
+            <a href="#pendaftaran" class="bg-basket-orange hover:bg-orange-600 text-white font-sport font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-lg shadow-basket-orange/30 transition-all text-xs sm:text-sm">
+                Daftar Sekarang
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. BERANDA / LANDING PAGE -->
+    <section id="beranda" class="relative bg-gradient-to-b from-basket-dark via-gray-900 to-gray-950 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-800">
+        <div class="absolute inset-0 z-0">
+            <img src="img/logoo.jpg" alt="Fresh Hoopers Background" class="w-full h-full object-cover object-center opacity-20 filter blur-[2px]" onerror="this.style.display='none'">
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/60 to-gray-950"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block bg-basket-orange/20 text-basket-orange border border-basket-orange/40 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6 backdrop-blur-md">
+                Akademi Basket Anak & Remaja Semarang
+            </span>
+            <h2 class="font-sport font-extrabold text-3xl sm:text-6xl text-white uppercase tracking-tight mb-6 leading-tight">
+                Membentuk Karakter & <span class="text-basket-orange">Mental Juara!</span>
+            </h2>
+            <p class="text-gray-300 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+                Selamat datang di Fresh Hoopers Academy Semarang. Pusat pelatihan bola basket dengan kurikulum terstruktur, pelatih profesional, dan fasilitas standar di Mojo Sport Centre.
+            </p>
+
+            <!-- Navigasi Cepat (Quick Access) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+                <a href="#pendaftaran" class="bg-basket-card p-4 rounded-2xl border border-gray-800 hover:border-basket-orange/50 transition-all group">
+                    <i class="fa-solid fa-user-plus text-basket-orange text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm text-white">Murid Baru</h4>
+                    <p class="text-[11px] text-gray-400">Formulir online & pendaftaran</p>
+                </a>
+                <a href="#spp" class="bg-basket-card p-4 rounded-2xl border border-gray-800 hover:border-basket-orange/50 transition-all group">
+                    <i class="fa-solid fa-wallet text-basket-orange text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm text-white">Portal SPP</h4>
+                    <p class="text-[11px] text-gray-400">Bayar & konfirmasi iuran</p>
+                </a>
+                <a href="#jadwal" class="bg-basket-card p-4 rounded-2xl border border-gray-800 hover:border-basket-orange/50 transition-all group">
+                    <i class="fa-solid fa-calendar-days text-basket-orange text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm text-white">Jadwal Latihan</h4>
+                    <p class="text-[11px] text-gray-400">Selasa & Jumat di Mojo</p>
+                </a>
+                <a href="#galeri" class="bg-basket-card p-4 rounded-2xl border border-gray-800 hover:border-basket-orange/50 transition-all group">
+                    <i class="fa-solid fa-camera-retro text-basket-orange text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm text-white">Galeri Tim</h4>
+                    <p class="text-[11px] text-gray-400">Dokumentasi kegiatan</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- 2A. PENDAFTARAN MURID BARU -->
+        <section id="pendaftaran" class="bg-basket-card border border-gray-800 rounded-3xl shadow-2xl overflow-hidden">
+            <div class="bg-gradient-to-r from-gray-900 to-basket-card px-6 py-6 border-b border-gray-800">
+                <h3 class="font-sport font-bold text-xl text-white flex items-center">
+                    <i class="fa-solid fa-file-pen text-basket-orange mr-3"></i> 1. Pendaftaran Murid Baru
+                </h3>
+                <p class="text-xs text-gray-400 mt-1">Lengkapi data pribadi calon siswa dan orang tua / wali di bawah ini.</p>
+            </div>
+
+            <form id="registrationForm" class="p-6 sm:p-8 space-y-8">
+                <!-- Data Pribadi -->
+                <div>
+                    <h4 class="text-basket-orange font-sport font-bold text-sm uppercase tracking-wider mb-4 flex items-center">
+                        <i class="fa-solid fa-id-card mr-2"></i> Data Pribadi Calon Murid
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Nama Lengkap *</label>
+                            <input type="text" id="fullName" required placeholder="cth. Kevin Pratama" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Nama Panggilan *</label>
+                            <input type="text" id="nickName" required placeholder="cth. Kevin" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Tempat, Tanggal Lahir & Usia *</label>
+                            <input type="text" id="birthPlaceDate" required placeholder="cth. Semarang, 15 Mei 2012 (12 Tahun)" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Asal Sekolah & Kelas *</label>
+                            <input type="text" id="schoolClass" required placeholder="cth. SMPN 1 Semarang - Kelas 7" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Ukuran Jersey *</label>
+                            <select id="jerseySize" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                                <option value="" disabled selected>Pilih Ukuran Jersey</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Pilihan Warna Jersey *</label>
+                            <select id="jerseyColor" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                                <option value="" disabled selected>Pilih Warna</option>
+                                <option value="Hijau">Hijau</option>
+                                <option value="Kuning">Kuning</option>
+                                <option value="Putih">Putih</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Orang Tua -->
+                <div class="border-t border-gray-800 pt-6">
+                    <h4 class="text-basket-orange font-sport font-bold text-sm uppercase tracking-wider mb-4 flex items-center">
+                        <i class="fa-solid fa-users mr-2"></i> Data Orang Tua / Wali
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Nama Orang Tua / Wali *</label>
+                            <input type="text" id="parentName" required placeholder="cth. Bpk. Hendra" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">No. WhatsApp Aktif (Grup Koordinasi) *</label>
+                            <input type="tel" id="whatsapp" required placeholder="cth. 081234567890" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Alamat Domisili di Semarang *</label>
+                            <input type="text" id="address" required placeholder="cth. Jl. Gajahmada No. 12, Semarang" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kelompok Umur & Dokumen -->
+                <div class="border-t border-gray-800 pt-6">
+                    <h4 class="text-basket-orange font-sport font-bold text-sm uppercase tracking-wider mb-4 flex items-center">
+                        <i class="fa-solid fa-layer-group mr-2"></i> Program & Dokumen
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Kelompok Umur (KU) *</label>
+                            <select id="ageGroup" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-basket-orange">
+                                <option value="" disabled selected>Pilih KU</option>
+                                <option value="KU-8 (6-8 Tahun)">KU-8 (6-8 Tahun)</option>
+                                <option value="KU-10 (9-10 Tahun)">KU-10 (9-10 Tahun)</option>
+                                <option value="KU-12 (11-12 Tahun)">KU-12 (11-12 Tahun)</option>
+                                <option value="KU-14 (13-14 Tahun)">KU-14 (13-14 Tahun)</option>
+                                <option value="KU-16 (15-16 Tahun)">KU-16 (15-16 Tahun)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Upload Akta / KK (Opsional)</label>
+                            <input type="file" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-gray-400 file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-basket-orange file:text-white hover:file:bg-orange-600">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex justify-end border-t border-gray-800">
+                    <button type="submit" id="submitBtn" class="bg-basket-orange hover:bg-orange-600 text-white font-sport font-bold px-8 py-3 rounded-xl shadow-lg shadow-basket-orange/30 transition-all flex items-center space-x-2">
+                        <span id="btnText">Kirim Pendaftaran</span>
+                        <i id="btnIcon" class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 2B. PORTAL PEMBAYARAN SPP BULANAN -->
+        <section id="spp" class="bg-basket-card border border-gray-800 rounded-3xl shadow-2xl p-6 sm:p-8 space-y-8">
+            <div class="border-b border-gray-800 pb-5">
+                <h3 class="font-sport font-bold text-xl text-white flex items-center">
+                    <i class="fa-solid fa-wallet text-basket-orange mr-3"></i> 2. Portal Pembayaran SPP Bulanan
+                </h3>
+                <p class="text-xs text-gray-400 mt-1">Pencatatan, iuran bulanan, serta cek status pembayaran siswa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Info Rekening & QRIS -->
+                <div class="bg-gray-950 p-6 rounded-2xl border border-gray-800 text-center space-y-4">
+                    <h4 class="font-sport font-bold text-sm text-basket-accent uppercase">Rekening & QRIS Resmi</h4>
+                    <div class="bg-white p-3 rounded-xl inline-block border border-gray-300">
+                        <img src="img/QRIS.jpeg" alt="QRIS Fresh Hoopers" class="w-36 h-36 object-contain" onerror="this.src='https://placehold.co/150x150/EEE/333?text=QRIS+Fresh+Hoopers'">
+                    </div>
+                    <div class="text-xs space-y-1">
+                        <p class="text-gray-400">Bank mandiri: <span class="text-white font-mono font-bold">1360038908635</span></p>
+                        <p class="text-gray-400">a.n. <span class="text-white font-semibold">AGUSTINUS DANU WIDYA</span></p>
+                        <p class="text-basket-orange font-bold pt-2">Nominal SPP: Rp 200.000 / Bulan</p>
+                    </div>
+                </div>
+
+                <!-- Form Konfirmasi SPP Mandiri -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="font-sport font-bold text-sm text-white">Konfirmasi Pembayaran SPP Mandiri</h4>
+                    <form id="sppForm" onsubmit="alert('Konfirmasi SPP berhasil terkirim ke Admin!'); return false;" class="space-y-4 bg-gray-950 p-6 rounded-2xl border border-gray-800">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-300 mb-1">Pilih Nama Siswa</label>
+                                <input type="text" required placeholder="Ketik nama siswa..." class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-basket-orange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-300 mb-1">Pilih Bulan Pembayaran</label>
+                                <select required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-basket-orange">
+                                    <option value="" disabled selected>Pilih Bulan</option>
+                                    <option value="Januari">Januari</option>
+                                    <option value="Februari">Februari</option>
+                                    <option value="Maret">Maret</option>
+                                    <option value="April">April</option>
+                                    <option value="Mei">Mei</option>
+                                    <option value="Juni">Juni</option>
+                                    <option value="Juli">Juli</option>
+                                    <option value="Agustus">Agustus</option>
+                                    <option value="September">September</option>
+                                    <option value="Oktober">Oktober</option>
+                                    <option value="November">November</option>
+                                    <option value="Desember">Desember</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-300 mb-1">Upload Bukti Transfer SPP</label>
+                            <input type="file" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-2 text-xs text-gray-400 file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:bg-basket-orange file:text-white">
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs transition-colors">
+                            Kirim Konfirmasi SPP
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Rekap Status Pembayaran Tabel -->
+            <div id="list-section" class="pt-6 border-t border-gray-800 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <h4 class="font-sport font-bold text-sm text-white">Rekap Status Pembayaran Siswa</h4>
+                    <div class="flex items-center gap-3">
+                        <select id="filterStatus" onchange="renderTable()" class="bg-gray-950 border border-gray-700 text-gray-300 text-xs px-3 py-1.5 rounded-xl focus:outline-none focus:border-basket-orange">
+                            <option value="ALL">Semua Status</option>
+                            <option value="Belum Lunas">Belum Lunas</option>
+                            <option value="Lunas">Lunas</option>
+                        </select>
+                        <span id="totalParticipantCount" class="bg-basket-orange/20 text-basket-orange font-semibold text-xs px-3 py-1.5 rounded-full border border-basket-orange/30">
+                            Total: 0 Peserta
+                        </span>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto rounded-xl border border-gray-800">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-gray-950 text-gray-400 uppercase text-xs font-sport border-b border-gray-800">
+                                <th class="px-6 py-4">NO</th>
+                                <th class="px-6 py-4">NAMA SISWA</th>
+                                <th class="px-6 py-4">KELOMPOK UMUR</th>
+                                <th class="px-6 py-4">WARNA JERSEY</th>
+                                <th class="px-6 py-4">ORANG TUA / WA</th>
+                                <th class="px-6 py-4 text-center">STATUS BAYAR</th>
+                            </tr>
+                        </thead>
+                        <tbody id="participantTableBody" class="divide-y divide-gray-800 text-gray-300 bg-gray-950/40">
+                            <!-- Rows injected dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="emptyState" class="hidden p-8 text-center text-gray-500">
+                    <p class="text-sm">Belum ada data pendaftar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2C. INFORMASI AGENDA & JADWAL KEGIATAN -->
+        <section id="jadwal" class="bg-basket-card border border-gray-800 rounded-3xl shadow-2xl p-6 sm:p-8 space-y-6">
+            <div class="border-b border-gray-800 pb-5">
+                <h3 class="font-sport font-bold text-xl text-white flex items-center">
+                    <i class="fa-solid fa-calendar-check text-basket-orange mr-3"></i> 3. Informasi Agenda & Jadwal Kegiatan
+                </h3>
+                <p class="text-xs text-gray-400 mt-1">Pusat jadwal latihan rutin dan pengumuman akademi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card Jadwal Latihan -->
+                <div class="bg-gray-950 p-6 rounded-2xl border border-gray-800 space-y-4">
+                    <div class="flex items-center space-x-3 text-basket-orange">
+                        <i class="fa-solid fa-location-dot text-2xl"></i>
+                        <div>
+                            <h4 class="font-sport font-bold text-white text-base">Mojo Sport Centre, Semarang</h4>
+                            <p class="text-xs text-gray-400">Lokasi Latihan Rutin</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-800 pt-4 space-y-2 text-xs">
+                        <div class="flex justify-between"><span class="text-gray-400">Hari Latihan:</span> <span class="font-bold text-white">SELASA & JUMAT</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Jam Latihan:</span> <span class="font-bold text-basket-orange">15.00 - 17.00 WIB</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Kategori Level:</span> <span class="text-gray-300">Beginner, Intermediate, Advanced</span></div>
+                    </div>
+                </div>
+
+                <!-- Pengumuman & Agenda -->
+                <div class="bg-gray-950 p-6 rounded-2xl border border-gray-800 space-y-4">
+                    <h4 class="font-sport font-bold text-white text-sm flex items-center">
+                        <i class="fa-solid fa-bullhorn text-basket-orange mr-2"></i> Pengumuman & Event
+                    </h4>
+                    <div class="space-y-3 text-xs">
+                        <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                            <span class="text-[10px] bg-basket-orange/20 text-basket-orange px-2 py-0.5 rounded font-bold">INFO LATIHAN</span>
+                            <p class="text-gray-300 font-semibold mt-1">Harap hadir 15 menit sebelum latihan dimulai untuk pemanasan mandiri.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                            <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-bold">EVENT MENDATANG</span>
+                            <p class="text-gray-300 font-semibold mt-1">Friendly Match / Kejuaraan Kelompok Umur Semarang Season 2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2D. GALERI FOTO & DOKUMENTASI -->
+        <section id="galeri" class="bg-basket-card border border-gray-800 rounded-3xl shadow-2xl p-6 sm:p-8 space-y-6">
+            <div class="border-b border-gray-800 pb-5">
+                <h3 class="font-sport font-bold text-xl text-white flex items-center">
+                    <i class="fa-solid fa-images text-basket-orange mr-3"></i> 4. Galeri Foto & Dokumentasi
+                </h3>
+                <p class="text-xs text-gray-400 mt-1">Momen aktivitas latihan rutin dan pertandingan tim Fresh Hoopers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Item Galeri 1 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-950 border border-gray-800">
+                    <img src="img/logoo.jpg" alt="Latihan Rutin" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/1E1E2F/FFF?text=Sesi+Latihan+Mojo'">
+                    <div class="p-4 bg-gray-950/90">
+                        <h5 class="font-bold text-xs text-white">📸 Sesi Latihan Rutin</h5>
+                        <p class="text-[11px] text-gray-400 mt-0.5">Mojo Sport Centre, Semarang</p>
+                    </div>
+                </div>
+                <!-- Item Galeri 2 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-950 border border-gray-800">
+                    <img src="img/logoo.jpg" alt="Pertandingan" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/1E1E2F/FFF?text=Momen+Pertandingan'">
+                    <div class="p-4 bg-gray-950/90">
+                        <h5 class="font-bold text-xs text-white">🏆 Momen Pertandingan</h5>
+                        <p class="text-[11px] text-gray-400 mt-0.5">Turnamen & Friendly Match</p>
+                    </div>
+                </div>
+                <!-- Item Galeri 3 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-950 border border-gray-800">
+                    <img src="img/logoo.jpg" alt="Kebersamaan Tim" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/1E1E2F/FFF?text=Kebersamaan+Tim'">
+                    <div class="p-4 bg-gray-950/90">
+                        <h5 class="font-bold text-xs text-white">🏀 Kebersamaan Fresh Hoopers</h5>
+                        <p class="text-[11px] text-gray-400 mt-0.5">Pembentukan Karakter & Tim</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-basket-dark border-t border-gray-800 py-8 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Fresh Hoopers Academy Semarang. All rights reserved.</p>
+    </footer>
+
+    <!-- MODAL SUKSES PENDAFTARAN -->
+    <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden p-6 space-y-4 text-center">
+            <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/30">
+                <i class="fa-solid fa-check text-2xl"></i>
+            </div>
+            <h3 class="font-sport font-bold text-lg text-white">Pendaftaran Berhasil!</h3>
+            <p class="text-xs text-gray-300">Data calon murid telah tercatat. Silakan kirim bukti pendaftaran ke WhatsApp Admin.</p>
+            <a id="waAdminBtn" href="#" target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs transition-colors">
+                <i class="fa-brands fa-whatsapp mr-2 text-base"></i> Konfirmasi ke WA Admin
+            </a>
+            <button onclick="closeModal()" class="w-full bg-gray-800 text-gray-400 py-2 rounded-xl text-xs hover:text-white">Tutup</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyKwslowBWf4wm4lv72ml8pnkTMo0NkuHbU0OGSzpdkpZVcgGW5UKSDepk8AmbuJg9e/exec'; 
+
+        let participants = JSON.parse(localStorage.getItem('basketball_participants')) || [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTable();
+        });
+
+        const registrationForm = document.getElementById('registrationForm');
+        registrationForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnIcon = document.getElementById('btnIcon');
+
+            submitBtn.disabled = true;
+            btnText.textContent = 'Mengirim...';
+            btnIcon.className = 'fa-solid fa-spinner fa-spin';
+
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                nickName: document.getElementById('nickName').value,
+                birthPlaceDate: document.getElementById('birthPlaceDate').value,
+                schoolClass: document.getElementById('schoolClass').value,
+                jerseySize: document.getElementById('jerseySize').value,
+                jerseyColor: document.getElementById('jerseyColor').value,
+                parentName: document.getElementById('parentName').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                address: document.getElementById('address').value,
+                ageGroup: document.getElementById('ageGroup').value,
+                paymentStatus: 'Belum Lunas'
+            };
+
+            participants.unshift(formData);
+            localStorage.setItem('basketball_participants', JSON.stringify(participants));
+            renderTable();
+
+            try {
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+
+            submitBtn.disabled = false;
+            btnText.textContent = 'Kirim Pendaftaran';
+            btnIcon.className = 'fa-solid fa-paper-plane';
+
+            showModal(formData);
+            registrationForm.reset();
+        });
+
+        function renderTable() {
+            const tbody = document.getElementById('participantTableBody');
+            const emptyState = document.getElementById('emptyState');
+            const totalCount = document.getElementById('totalParticipantCount');
+            const filterStatus = document.getElementById('filterStatus').value;
+
+            tbody.innerHTML = '';
+
+            let filteredParticipants = participants;
+            if (filterStatus !== 'ALL') {
+                filteredParticipants = participants.filter(p => p.paymentStatus === filterStatus);
+            }
+
+            totalCount.textContent = `Total: ${participants.length} Peserta`;
+
+            if (filteredParticipants.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            filteredParticipants.forEach((p, index) => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-gray-800/40 transition-colors';
+                
+                const statusBadge = p.paymentStatus === 'Lunas' 
+                    ? `<span onclick="togglePaymentStatus(${index})" class="cursor-pointer bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-xs font-semibold inline-flex items-center gap-1 hover:bg-emerald-500/20 transition-colors"><i class="fa-solid fa-check"></i> Lunas</span>`
+                    : `<span onclick="togglePaymentStatus(${index})" class="cursor-pointer bg-amber-500/10 text-amber-400 border border-amber-500/20 px-3 py-1 rounded-full text-xs font-semibold inline-flex items-center gap-1 hover:bg-amber-500/20 transition-colors"><i class="fa-solid fa-clock"></i> Belum Lunas</span>`;
+
+                tr.innerHTML = `
+                    <td class="px-6 py-4 font-mono text-gray-500">${index + 1}</td>
+                    <td class="px-6 py-4">
+                        <div class="font-bold text-white">${p.fullName}</div>
+                        <div class="text-xs text-gray-400">Panggilan: ${p.nickName}</div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <span class="bg-basket-orange/10 text-basket-orange border border-basket-orange/30 px-2.5 py-1 rounded-lg text-xs font-semibold">${p.ageGroup}</span>
+                    </td>
+                    <td class="px-6 py-4 text-xs text-gray-300">${p.jerseySize} (${p.jerseyColor || 'Warna Hijau'})</td>
+                    <td class="px-6 py-4">
+                        <div class="text-white font-medium">${p.parentName}</div>
+                        <div class="text-xs text-emerald-400"><i class="fa-brands fa-whatsapp mr-1"></i>${p.whatsapp}</div>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        ${statusBadge}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function togglePaymentStatus(index) {
+            const adminPin = prompt("Masukkan PIN Admin:");
+            if (adminPin === "12345") {
+                participants[index].paymentStatus = participants[index].paymentStatus === 'Lunas' ? 'Belum Lunas' : 'Lunas';
+                localStorage.setItem('basketball_participants', JSON.stringify(participants));
+                renderTable();
+            } else if (adminPin !== null) {
+                alert("PIN Salah!");
+            }
+        }
+
+        function showModal(data) {
+            const waText = encodeURIComponent(`Halo Admin Fresh Hoopers Semarang, saya mendaftarkan anak bernama *${data.fullName}* (${data.ageGroup}). Mohon info konfirmasi pendaftaran.`);
+            document.getElementById('waAdminBtn').href = `https://wa.me/08170401588?text=${waText}`;
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
